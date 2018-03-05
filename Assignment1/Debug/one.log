@@ -1,0 +1,6 @@
+﻿  surf.cpp
+surf.cpp(36): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  curve.cpp
+curve.cpp(237): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  one.vcxproj -> F:\sources\sutd-sources\50.017\Assignment1\Debug\one.exe
