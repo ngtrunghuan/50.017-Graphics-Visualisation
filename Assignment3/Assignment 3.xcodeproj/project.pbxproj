@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE0197CF20454C5700079907 /* libRK4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0197CE20454C5700079907 /* libRK4.a */; };
+		CE8CBFC02035D37D0004A3A9 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFA02035D37D0004A3A9 /* camera.cpp */; };
+		CE8CBFC12035D37D0004A3A9 /* ClothSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFA22035D37D0004A3A9 /* ClothSystem.cpp */; };
+		CE8CBFC32035D37D0004A3A9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFA52035D37D0004A3A9 /* main.cpp */; };
+		CE8CBFC42035D37D0004A3A9 /* particleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFA62035D37D0004A3A9 /* particleSystem.cpp */; };
+		CE8CBFC52035D37D0004A3A9 /* pendulumSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFA82035D37D0004A3A9 /* pendulumSystem.cpp */; };
+		CE8CBFC62035D37D0004A3A9 /* simpleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFAA2035D37D0004A3A9 /* simpleSystem.cpp */; };
+		CE8CBFC72035D37D0004A3A9 /* TimeStepper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFAC2035D37D0004A3A9 /* TimeStepper.cpp */; };
+		CE8CBFC82035D37D0004A3A9 /* Matrix2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFB92035D37D0004A3A9 /* Matrix2f.cpp */; };
+		CE8CBFC92035D37D0004A3A9 /* Matrix3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFBA2035D37D0004A3A9 /* Matrix3f.cpp */; };
+		CE8CBFCA2035D37D0004A3A9 /* Matrix4f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFBB2035D37D0004A3A9 /* Matrix4f.cpp */; };
+		CE8CBFCB2035D37D0004A3A9 /* Quat4f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFBC2035D37D0004A3A9 /* Quat4f.cpp */; };
+		CE8CBFCC2035D37D0004A3A9 /* Vector2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFBD2035D37D0004A3A9 /* Vector2f.cpp */; };
+		CE8CBFCD2035D37D0004A3A9 /* Vector3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFBE2035D37D0004A3A9 /* Vector3f.cpp */; };
+		CE8CBFCE2035D37D0004A3A9 /* Vector4f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8CBFBF2035D37D0004A3A9 /* Vector4f.cpp */; };
+		FDE251251C91561A00259B3A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE251241C91561A00259B3A /* OpenGL.framework */; };
+		FDE251271C91561F00259B3A /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE251261C91561F00259B3A /* GLUT.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDE250EF1C91550B00259B3A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE0197CE20454C5700079907 /* libRK4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libRK4.a; sourceTree = "<group>"; };
+		CE8CBFA02035D37D0004A3A9 /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = camera.cpp; sourceTree = "<group>"; };
+		CE8CBFA12035D37D0004A3A9 /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
+		CE8CBFA22035D37D0004A3A9 /* ClothSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClothSystem.cpp; sourceTree = "<group>"; };
+		CE8CBFA32035D37D0004A3A9 /* ClothSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClothSystem.h; sourceTree = "<group>"; };
+		CE8CBFA52035D37D0004A3A9 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CE8CBFA62035D37D0004A3A9 /* particleSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particleSystem.cpp; sourceTree = "<group>"; };
+		CE8CBFA72035D37D0004A3A9 /* particleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particleSystem.h; sourceTree = "<group>"; };
+		CE8CBFA82035D37D0004A3A9 /* pendulumSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pendulumSystem.cpp; sourceTree = "<group>"; };
+		CE8CBFA92035D37D0004A3A9 /* pendulumSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pendulumSystem.h; sourceTree = "<group>"; };
+		CE8CBFAA2035D37D0004A3A9 /* simpleSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simpleSystem.cpp; sourceTree = "<group>"; };
+		CE8CBFAB2035D37D0004A3A9 /* simpleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simpleSystem.h; sourceTree = "<group>"; };
+		CE8CBFAC2035D37D0004A3A9 /* TimeStepper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeStepper.cpp; sourceTree = "<group>"; };
+		CE8CBFAD2035D37D0004A3A9 /* TimeStepper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeStepper.hpp; sourceTree = "<group>"; };
+		CE8CBFB02035D37D0004A3A9 /* Matrix2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix2f.h; sourceTree = "<group>"; };
+		CE8CBFB12035D37D0004A3A9 /* Matrix3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix3f.h; sourceTree = "<group>"; };
+		CE8CBFB22035D37D0004A3A9 /* Matrix4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix4f.h; sourceTree = "<group>"; };
+		CE8CBFB32035D37D0004A3A9 /* Quat4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quat4f.h; sourceTree = "<group>"; };
+		CE8CBFB42035D37D0004A3A9 /* vecmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vecmath.h; sourceTree = "<group>"; };
+		CE8CBFB52035D37D0004A3A9 /* Vector2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector2f.h; sourceTree = "<group>"; };
+		CE8CBFB62035D37D0004A3A9 /* Vector3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3f.h; sourceTree = "<group>"; };
+		CE8CBFB72035D37D0004A3A9 /* Vector4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector4f.h; sourceTree = "<group>"; };
+		CE8CBFB92035D37D0004A3A9 /* Matrix2f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix2f.cpp; sourceTree = "<group>"; };
+		CE8CBFBA2035D37D0004A3A9 /* Matrix3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix3f.cpp; sourceTree = "<group>"; };
+		CE8CBFBB2035D37D0004A3A9 /* Matrix4f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix4f.cpp; sourceTree = "<group>"; };
+		CE8CBFBC2035D37D0004A3A9 /* Quat4f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quat4f.cpp; sourceTree = "<group>"; };
+		CE8CBFBD2035D37D0004A3A9 /* Vector2f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2f.cpp; sourceTree = "<group>"; };
+		CE8CBFBE2035D37D0004A3A9 /* Vector3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3f.cpp; sourceTree = "<group>"; };
+		CE8CBFBF2035D37D0004A3A9 /* Vector4f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector4f.cpp; sourceTree = "<group>"; };
+		FDE250F11C91550B00259B3A /* Assignment 3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Assignment 3"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDE251241C91561A00259B3A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		FDE251261C91561F00259B3A /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDE250EE1C91550B00259B3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0197CF20454C5700079907 /* libRK4.a in Frameworks */,
+				FDE251271C91561F00259B3A /* GLUT.framework in Frameworks */,
+				FDE251251C91561A00259B3A /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE8CBF9E2035D37D0004A3A9 /* Assignment 3 */ = {
+			isa = PBXGroup;
+			children = (
+				CE8CBFA02035D37D0004A3A9 /* camera.cpp */,
+				CE8CBFA12035D37D0004A3A9 /* camera.h */,
+				CE8CBFA22035D37D0004A3A9 /* ClothSystem.cpp */,
+				CE8CBFA32035D37D0004A3A9 /* ClothSystem.h */,
+				CE8CBFA52035D37D0004A3A9 /* main.cpp */,
+				CE8CBFA62035D37D0004A3A9 /* particleSystem.cpp */,
+				CE8CBFA72035D37D0004A3A9 /* particleSystem.h */,
+				CE8CBFA82035D37D0004A3A9 /* pendulumSystem.cpp */,
+				CE8CBFA92035D37D0004A3A9 /* pendulumSystem.h */,
+				CE8CBFAA2035D37D0004A3A9 /* simpleSystem.cpp */,
+				CE8CBFAB2035D37D0004A3A9 /* simpleSystem.h */,
+				CE8CBFAC2035D37D0004A3A9 /* TimeStepper.cpp */,
+				CE8CBFAD2035D37D0004A3A9 /* TimeStepper.hpp */,
+				CE8CBFAE2035D37D0004A3A9 /* vecmath */,
+			);
+			path = "Assignment 3";
+			sourceTree = "<group>";
+		};
+		CE8CBFAE2035D37D0004A3A9 /* vecmath */ = {
+			isa = PBXGroup;
+			children = (
+				CE8CBFAF2035D37D0004A3A9 /* include */,
+				CE8CBFB82035D37D0004A3A9 /* src */,
+			);
+			path = vecmath;
+			sourceTree = "<group>";
+		};
+		CE8CBFAF2035D37D0004A3A9 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CE8CBFB02035D37D0004A3A9 /* Matrix2f.h */,
+				CE8CBFB12035D37D0004A3A9 /* Matrix3f.h */,
+				CE8CBFB22035D37D0004A3A9 /* Matrix4f.h */,
+				CE8CBFB32035D37D0004A3A9 /* Quat4f.h */,
+				CE8CBFB42035D37D0004A3A9 /* vecmath.h */,
+				CE8CBFB52035D37D0004A3A9 /* Vector2f.h */,
+				CE8CBFB62035D37D0004A3A9 /* Vector3f.h */,
+				CE8CBFB72035D37D0004A3A9 /* Vector4f.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CE8CBFB82035D37D0004A3A9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CE8CBFB92035D37D0004A3A9 /* Matrix2f.cpp */,
+				CE8CBFBA2035D37D0004A3A9 /* Matrix3f.cpp */,
+				CE8CBFBB2035D37D0004A3A9 /* Matrix4f.cpp */,
+				CE8CBFBC2035D37D0004A3A9 /* Quat4f.cpp */,
+				CE8CBFBD2035D37D0004A3A9 /* Vector2f.cpp */,
+				CE8CBFBE2035D37D0004A3A9 /* Vector3f.cpp */,
+				CE8CBFBF2035D37D0004A3A9 /* Vector4f.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FDE250E81C91550B00259B3A = {
+			isa = PBXGroup;
+			children = (
+				CE0197CE20454C5700079907 /* libRK4.a */,
+				CE8CBF9E2035D37D0004A3A9 /* Assignment 3 */,
+				FDE251261C91561F00259B3A /* GLUT.framework */,
+				FDE251241C91561A00259B3A /* OpenGL.framework */,
+				FDE250F21C91550B00259B3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDE250F21C91550B00259B3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDE250F11C91550B00259B3A /* Assignment 3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDE250F01C91550B00259B3A /* Assignment 3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDE250F81C91550B00259B3A /* Build configuration list for PBXNativeTarget "Assignment 3" */;
+			buildPhases = (
+				FDE250ED1C91550B00259B3A /* Sources */,
+				FDE250EE1C91550B00259B3A /* Frameworks */,
+				FDE250EF1C91550B00259B3A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Assignment 3";
+			productName = Assignment_3;
+			productReference = FDE250F11C91550B00259B3A /* Assignment 3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDE250E91C91550B00259B3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					FDE250F01C91550B00259B3A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FDE250EC1C91550B00259B3A /* Build configuration list for PBXProject "Assignment 3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FDE250E81C91550B00259B3A;
+			productRefGroup = FDE250F21C91550B00259B3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDE250F01C91550B00259B3A /* Assignment 3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDE250ED1C91550B00259B3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE8CBFC52035D37D0004A3A9 /* pendulumSystem.cpp in Sources */,
+				CE8CBFC42035D37D0004A3A9 /* particleSystem.cpp in Sources */,
+				CE8CBFCD2035D37D0004A3A9 /* Vector3f.cpp in Sources */,
+				CE8CBFCA2035D37D0004A3A9 /* Matrix4f.cpp in Sources */,
+				CE8CBFCB2035D37D0004A3A9 /* Quat4f.cpp in Sources */,
+				CE8CBFC82035D37D0004A3A9 /* Matrix2f.cpp in Sources */,
+				CE8CBFCE2035D37D0004A3A9 /* Vector4f.cpp in Sources */,
+				CE8CBFC92035D37D0004A3A9 /* Matrix3f.cpp in Sources */,
+				CE8CBFC02035D37D0004A3A9 /* camera.cpp in Sources */,
+				CE8CBFC12035D37D0004A3A9 /* ClothSystem.cpp in Sources */,
+				CE8CBFCC2035D37D0004A3A9 /* Vector2f.cpp in Sources */,
+				CE8CBFC72035D37D0004A3A9 /* TimeStepper.cpp in Sources */,
+				CE8CBFC62035D37D0004A3A9 /* simpleSystem.cpp in Sources */,
+				CE8CBFC32035D37D0004A3A9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FDE250F61C91550B00259B3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FDE250F71C91550B00259B3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FDE250F91C91550B00259B3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Assignment_3",
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+				);
+				PRODUCT_NAME = "Assignment 3";
+			};
+			name = Debug;
+		};
+		FDE250FA1C91550B00259B3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Assignment_3",
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+					"$(PROJECT_DIR)/Assignment",
+					3,
+				);
+				PRODUCT_NAME = "Assignment 3";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDE250EC1C91550B00259B3A /* Build configuration list for PBXProject "Assignment 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDE250F61C91550B00259B3A /* Debug */,
+				FDE250F71C91550B00259B3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDE250F81C91550B00259B3A /* Build configuration list for PBXNativeTarget "Assignment 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDE250F91C91550B00259B3A /* Debug */,
+				FDE250FA1C91550B00259B3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDE250E91C91550B00259B3A /* Project object */;
+}
