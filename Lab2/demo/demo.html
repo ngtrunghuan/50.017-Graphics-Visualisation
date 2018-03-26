@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> three.js webgl - interactive cubes </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+		
+		<script src="three.min.js"></script>
+		
+	</head>
+	<body>
+
+		<script>
+
+			var container;
+			var gCamera, gScene, gRenderer;
+
+			var gMouse = new THREE.Vector2();			
+			
+			var gMoveForwardReq = false, 
+			gMoveLeftReq = false, 
+			gMoveRightReq = false, 
+			gMoveBackwardReq = false;
+			
+			var isLeftMouseDown = false;
+
+			init();
+			animate();
+
+			function init() {
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				gCamera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
+				gCamera.position.y = 1.5;				
+
+				gScene = new THREE.Scene();
+				gScene.background = new THREE.Color( 0xf0f0f0 );
+
+				var light = new THREE.DirectionalLight( 0xffffff, 1 );
+				light.position.set( 1, 1, 1 ).normalize();
+				gScene.add( light );				
+
+				var geometry = new THREE.BoxBufferGeometry( 20, 20, 20 );
+
+				for ( var i = 0; i < 500; i ++ ) {
+
+					var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
+
+					object.position.x = Math.random() * 800 - 400;
+					object.position.y = Math.random() * 800 - 400;
+					object.position.z = Math.random() * 800 - 400;
+
+					object.rotation.x = Math.random() * 2 * Math.PI;
+					object.rotation.y = Math.random() * 2 * Math.PI;
+					object.rotation.z = Math.random() * 2 * Math.PI;
+
+					object.scale.x = Math.random() + 0.5;
+					object.scale.y = Math.random() + 0.5;
+					object.scale.z = Math.random() + 0.5;
+
+					gScene.add( object );
+
+				}
+
+				gRenderer = new THREE.WebGLRenderer();
+				gRenderer.setPixelRatio( window.devicePixelRatio );
+				gRenderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild(gRenderer.domElement);
+
+				document.addEventListener( 'mousemove', onMouseMove, false );
+				document.addEventListener( 'keydown', onKeyDown, false );
+				document.addEventListener( 'keyup', onKeyUp, false );
+				document.addEventListener( 'mousedown', onMouseDown, false);
+				document.addEventListener( 'mouseup', onMouseUp, false);
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				gCamera.aspect = window.innerWidth / window.innerHeight;
+				gCamera.updateProjectionMatrix();
+
+				gRenderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onMouseMove( event ) {
+
+				event.preventDefault();
+				
+				
+				if (isLeftMouseDown) {				
+			
+					var movementX = event.movementX; // || event.mozMovementX ||  0;
+					
+					var movementY = event.movementY; // || event.mozMovementY ||  0;						
+					
+					gCamera.rotateX(0.002*movementY);
+					gCamera.rotateY(0.002*movementX);
+					//yawObject.rotation.y -= movementX * 0.002;
+					//pitchObject.rotation.x -= movementY * 0.002;
+					//pitchObject.rotation.x = Math.max( - 30 / 180 * Math.PI, Math.min( 30 / 180 * Math.PI , pitchObject.rotation.x ) );
+					
+				}
+
+			}
+			
+			function onMouseDown( event ) {
+				
+				event.preventDefault();
+				console.log(event)
+				// Check left button
+				if (event.button == 0) {
+					isLeftMouseDown = true;
+				}
+				
+				//gCamera.updateMatrixWorld();
+				gMouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				gMouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+				
+				// find intersections
+
+				var raycaster = new THREE.Raycaster();				
+				raycaster.setFromCamera( gMouse, gCamera );
+
+				var intersects = raycaster.intersectObjects( gScene.children );
+				
+				if ( intersects.length > 0 ) {
+					intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );				
+				}
+							
+			}
+			
+			function onMouseUp( event ) {
+				event.preventDefault();
+				
+				if (event.button == 0) {
+					isLeftMouseDown = false;
+				}
+			}
+			
+			//function moveForward () {
+			//	gCamera.translateZ( -1 * delta );
+			//}
+
+			//function moveBackward () {
+			//	gCamera.translateZ( 1 * delta );
+			//}
+
+			//function moveRight () {
+			//	gCamera.rotateX( 1 * delta );
+			//}
+
+			//function moveLeft () {
+			//	gCamera.rotateX( -1 * delta );
+			//}
+			
+			function onKeyDown ( event ) {
+				switch( event.keyCode ) {
+
+				case 38: // up
+				case 87: // w
+					gMoveForwardReq = true;
+					break;
+
+				case 37: // left
+				case 65: // a
+					gMoveLeftReq = true;
+					break;
+
+				case 40: // down
+				case 83: // s
+					gMoveBackwardReq = true;
+					break;
+
+				case 39: // right
+				case 68: // d
+					gMoveRightReq = true;
+					break;
+
+				}
+			}
+			
+			function onKeyUp ( event ) {
+				switch( event.keyCode ) {
+
+				case 38: // up
+				case 87: // w
+					gMoveForwardReq = false;
+					break;
+
+				case 37: // left
+				case 65: // a
+					gMoveLeftReq = false;
+					break;
+
+				case 40: // down
+				case 83: // s
+					gMoveBackwardReq = false;
+					break;
+
+				case 39: // right
+				case 68: // d
+					gMoveRightReq = false;
+					break;
+
+				}
+			}
+
+			//
+			var prevTime = performance.now();
+			var delta = performance.now();
+			
+			function animate() {
+			
+				var time = performance.now();
+				delta = ( time - prevTime ) / 10;
+
+				if (gMoveRightReq) { gCamera.translateX( 1 * delta ); }
+				if (gMoveLeftReq) { gCamera.translateX( -1 * delta ); }
+				if (gMoveForwardReq) { gCamera.translateZ( -1 * delta ); }
+				if (gMoveBackwardReq) { gCamera.translateZ( 1 * delta ); }
+
+				requestAnimationFrame( animate );
+
+				render();
+				prevTime = time;
+
+			}
+
+			function render() {
+
+				//gCamera.updateMatrixWorld();
+				
+				gRenderer.render( gScene, gCamera );
+
+			}
+
+		</script>
+
+	</body>
+</html>
